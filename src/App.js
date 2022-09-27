@@ -20,14 +20,15 @@ class App extends React.Component {
     }
   }
 
-  handleSubmitForm = (e) => {
+  handleChangeForm = (e) => {
     e.preventDefault();
-    this.setState({ searchQuery: e.target.value });
-    this.handleRequest();
+    this.setState({ searchQuery: e.target.value});
   }
 
-  handleRequest = async() => {
+  handleSubmitForm = async(e) => {
+    e.preventDefault();
     try {
+      console.log(this.state.searchQuery);
       const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_API_KEY}&q=${this.state.searchQuery}&format=json`;
       const resp = await axios.get(API);
       console.log('Query Succeeded');
@@ -59,7 +60,7 @@ class App extends React.Component {
         </Container>
         {<img src={this.state.map} alt="A map will display here. "></img>}
         {this.state.error ? this.state.errorMessage : true}
-        <CityForm handleSubmitForm={this.handleSubmitForm} />
+        <CityForm handleSubmitForm={this.handleSubmitForm} handleChangeForm={this.handleChangeForm} />
       </>
     );
   }
