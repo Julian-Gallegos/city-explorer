@@ -22,6 +22,8 @@
 
 ![Web Request Response Cycle Diagram](request-response-cycle.png)
 
+[Axios Documentation](https://www.npmjs.com/package/axios#features)
+
 
 ## Time Sheets
 
