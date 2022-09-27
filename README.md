@@ -45,11 +45,11 @@ Name of feature: Locations: As a user of City Explorer, I want to enter the name
 
 Estimate of time needed to complete: 25 minutes
 
-Start time: _____
+Start time: 9:20pm
 
-Finish time: _____
+Finish time: 11:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 110 minutes
 
 ### Feature 3
 
@@ -57,11 +57,11 @@ Name of feature: Map: As a user, I want to see a map of the city so that I can s
 
 Estimate of time needed to complete: 25 minutes
 
-Start time: _____
+Start time: 11:30pm
 
-Finish time: _____
+Finish time: Not finished properly
 
-Actual time needed to complete: _____
+Actual time needed to complete: N/A
 
 ### Feature 4
 
@@ -69,8 +69,8 @@ Name of feature: Errors: As a user, I want clear messages if something goes wron
 
 Estimate of time needed to complete: 25 minutes
 
-Start time: _____
+Start time: 12:30 AM
 
-Finish time: _____
+Finish time: 12:32 AM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 minutes

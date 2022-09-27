@@ -16,6 +16,7 @@ class App extends React.Component {
       location: {},
       error: false,
       errorMessage: '',
+      map: '',
     }
   }
 
@@ -25,15 +26,16 @@ class App extends React.Component {
     this.handleRequest();
   }
 
-  handleRequest = async () => {
+  handleRequest = async() => {
     try {
       const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_API_KEY}&q=${this.state.searchQuery}&format=json`;
       const resp = await axios.get(API);
-
       console.log('Query Succeeded');
-      console.log(resp.data[0]);
-      this.setState({ location: resp.data[0] })
-
+      this.setState({ location: resp.data[0] }, () => {
+        let URL = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_API_KEY}&center=${this.state.location.lat},${this.state.location.lon}&size=600x600&zoom=14&markers=${this.state.location.lat},${this.state.location.lon}|icon:large-blue-cutout&format=png`;
+        this.setState({ map: URL });
+      });
+      this.setState({ error: false});
     } catch (error) {
       console.log(error);
       this.setState({ error: true });
@@ -55,6 +57,8 @@ class App extends React.Component {
             Longitude: {this.state.location.lon}
           </div>
         </Container>
+        {<img src={this.state.map} alt="A map will display here. "></img>}
+        {this.state.error ? this.state.errorMessage : true}
         <CityForm handleSubmitForm={this.handleSubmitForm} />
       </>
     );
