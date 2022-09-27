@@ -59,9 +59,9 @@ Estimate of time needed to complete: 25 minutes
 
 Start time: 11:30pm
 
-Finish time: Not finished properly
+Finish time: ~1:20am
 
-Actual time needed to complete: N/A
+Actual time needed to complete: Hard to define, was an on and off issue but technically 2 hours
 
 ### Feature 4
 
