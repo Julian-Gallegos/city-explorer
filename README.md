@@ -31,11 +31,11 @@ Name of feature: Set up your React repository & API keys
 
 Estimate of time needed to complete: 25 minutes
 
-Start time: _____
+Start time: 8:20pm
 
-Finish time: _____
+Finish time: 9:20pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 60 minutes
 
 ### Feature 2
 
