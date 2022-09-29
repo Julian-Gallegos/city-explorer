@@ -18,12 +18,12 @@
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
+
 [How the Web Works, HTTP Request/Response Cycle, used as reference while drawing request/response diagram](https://backend.turing.edu/module2/lessons/how_the_web_works_http)
 
 ![Web Request Response Cycle Diagram](request-response-cycle.png)
 
 [Axios Documentation](https://www.npmjs.com/package/axios#features)
-
 
 ## Time Sheets
 
