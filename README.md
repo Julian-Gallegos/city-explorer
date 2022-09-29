@@ -21,9 +21,13 @@
 
 [How the Web Works, HTTP Request/Response Cycle, used as reference while drawing request/response diagram](https://backend.turing.edu/module2/lessons/how_the_web_works_http)
 
-![Web Request Response Cycle Diagram](request-response-cycle.png)
-
 [Axios Documentation](https://www.npmjs.com/package/axios#features)
+
+![Client-Server Dataflow1](request-response-cycle.png)
+
+![Client-Server Dataflow2](DataFlowDiagram.png)
+
+![Client-Server Dataflow3](Lab%208%20diagram.png)
 
 ## Time Sheets
 
