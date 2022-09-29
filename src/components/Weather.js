@@ -1,19 +1,20 @@
 import React from 'react';
 
+import Stack from 'react-bootstrap/Stack'
+
 class Weather extends React.Component {
     render() {
         return (
-            <>
-                Weather Info:
-                <div>Date: {this.props.weather[0].date}</div>
-                <div>{this.props.weather[0].description}</div>
-
-                <div>Date: {this.props.weather[1].date}</div>
-                <div>{this.props.weather[1].description}</div>
-
-                <div>Date: {this.props.weather[2].date}</div>
-                <div>{this.props.weather[2].description}</div>
-            </>
+            <div className='mx-auto'>
+                Weather Forecast:
+                <Stack gap={2}>
+                    {this.props.weather.map(data => {
+                        return (
+                            <div key={this.props.searchQuery+' '+data.date} className='bg-light border'>| {data.date} | Temp (c): {data.description}</div>
+                        )
+                    })}
+                </Stack>
+            </div>
         );
     }
 }

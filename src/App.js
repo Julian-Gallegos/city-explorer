@@ -2,11 +2,12 @@ import React from 'react';
 import './App.scss';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+
 import './components/CityForm';
 import CityForm from './components/CityForm';
-import { Container } from 'react-bootstrap';
-import Weather from './components/Weather';
 
+import Weather from './components/Weather';
 import axios from 'axios';
 
 
@@ -46,7 +47,7 @@ class App extends React.Component {
     };
   }
 
-  fetchWeatherData = async() => {
+  fetchWeatherData = async () => {
     try {
       const resp = await axios.get(`http://localhost:3001/weather?query=${this.state.searchQuery}&lat=${this.state.location.lat}&lon=${this.state.location.lon}`);
       this.setState({ weather: resp.data });
@@ -65,7 +66,7 @@ class App extends React.Component {
           <div>Latitude: {this.state.location.lat}</div>
           <div>Longitude: {this.state.location.lon}</div>
 
-          <div>{this.state.weather.length > 0 ? <Weather className="my-3" weather={this.state.weather} /> : false}</div>
+          <div>{this.state.weather.length > 0 ? <Weather className="my-3" weather={this.state.weather} searchQuery={this.state.searchQuery} /> : false}</div>
 
 
           {this.state.map.length > 0 ? <img className="mx-auto" src={this.state.map} alt="A map"></img> : false}
