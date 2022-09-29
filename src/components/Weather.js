@@ -1,5 +1,5 @@
 import React from 'react';
-
+import WeatherDay from './WeatherDay';
 import Stack from 'react-bootstrap/Stack'
 
 class Weather extends React.Component {
@@ -10,7 +10,7 @@ class Weather extends React.Component {
                 <Stack gap={2}>
                     {this.props.weather.map(data => {
                         return (
-                            <div key={this.props.searchQuery+' '+data.date} className='bg-light border'>| {data.date} | Temp (c): {data.description}</div>
+                            <WeatherDay key={this.props.searchQuery+' '+data.date} data={data} />
                         )
                     })}
                 </Stack>
@@ -19,4 +19,4 @@ class Weather extends React.Component {
     }
 }
 
-export default Weather
+export default Weather;
