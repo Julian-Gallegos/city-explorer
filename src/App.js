@@ -31,7 +31,6 @@ class App extends React.Component {
 
   handleSubmitForm = async (e) => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_API_SERVER_PATH);
     try {
       const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_API_KEY}&q=${this.state.searchQuery}&format=json`;
       const resp = await axios.get(API);
