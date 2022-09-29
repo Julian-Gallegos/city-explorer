@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.scss';
-import CityForm from './components/CityForm';
-import Weather from './components/Weather';
-import Movies from './components/Movies';
+import Main from './components/Main';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -79,18 +77,15 @@ class App extends React.Component {
     return (
       <>
         <Container>
-          <h1>The city is: {this.state.location.display_name}</h1>
-          <div>Latitude: {this.state.location.lat}</div>
-          <div>Longitude: {this.state.location.lon}</div>
-
-          <div>{this.state.weather.length > 0 ? <Weather className="my-3" weather={this.state.weather} searchQuery={this.state.searchQuery} /> : false}</div>
-
-
-          {this.state.map.length > 0 ? <img className="mx-auto" src={this.state.map} alt="A map"></img> : false}
-
-          <CityForm handleSubmitForm={this.handleSubmitForm} handleChangeForm={this.handleChangeForm} />
-          {this.state.error ? this.state.errorMessage : true}
-          <div>{this.state.movies.length > 0 ? <Movies className="my-3" movies={this.state.movies} searchQuery={this.state.searchQuery} /> : false}</div>
+          <Main location={this.state.location} 
+                searchQuery={this.state.searchQuery} 
+                map={this.state.map} 
+                weather={this.state.weather} 
+                handleSubmitForm={this.handleSubmitForm} 
+                handleChangeForm={this.handleChangeForm}
+                movies={this.state.movies}
+                error={this.state.error}
+                errorMessage={this.state.errorMessage} />
         </Container>
       </>
     );
